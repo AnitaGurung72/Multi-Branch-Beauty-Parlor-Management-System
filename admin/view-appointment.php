@@ -133,10 +133,13 @@ while ($row=mysqli_fetch_array($ret)) {
     <td> <?php  
 if($row['Status']=="1")
 {
-  echo "Selected";
+  echo "Accepted";
 }
-
 if($row['Status']=="2")
+{
+  echo "Accepted";
+}
+if($row['Status']=="3")
 {
   echo "Rejected";
 }
@@ -161,7 +164,8 @@ if($row['Status']=="2")
     <td>
    <select name="status" class="form-control wd-450" required="true" >
      <option value="1" selected="true">Selected</option>
-     <option value="2">Rejected</option>
+     <option value="2">Accepted</option>
+     <option value="3">Rejected</option>
    </select></td>
   </tr>
 
